@@ -1,1 +1,0 @@
-Welcome Keun young oracle!!!!!
