@@ -44,117 +44,121 @@
         cursor: pointer;
       }
       .sns-icon.facebook {
-        background-image: url('/Oracle/image/facebook.png');
-      }
-      .sns-icon.kakaotalk {
-        background-image: url('/Oracle/image/kakao-talk.png');
+        background-image: url('/FROND_END/images/facebook.png');
       }
       .sns-icon.twitter {
-        background-image: url('/Oracle/image/twitter.png');
+        background-image: url('/FROND_END/images/twitter.png');
       }
       .sns-icon.link {
-        background-image: url('/Oracle/image/link.png');
+        background-image: url('/FROND_END/images/link.png');
       }
+      .sns-icon.naver {
+        background-image: url('/FROND_END/images/naver.png');
+        cursor: pointer;
+      }
+
     </style>
     <title>10번 페이지</title>
   </head>
   <body>
-    <br><br><br>
-    <div class="wrapper">
-      <div class="box">
-        결과를 공유해보세요~!
-      </div>
+  <br><br><br>
+  <div class="wrapper">
+    <div class="box">
+      결과를 공유해보세요~!
     </div>
+  </div>
 
-    <!-- 페이스북 SDK 스크립트 -->
-    <div id="fb-root"></div>
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId: '1285820169038891',
-          xfbml: true,
-          version: 'v17.0'
-        });
-      };
-    
-      function setFacebookShareURL(url) {
-        var facebookButton = document.getElementById('facebookButton');
-        var shareLink = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url) + '&amp;src=sdkpreparse';
-        facebookButton.setAttribute('data-href', url);
-        facebookButton.querySelector('a').setAttribute('href', shareLink);
-      }
-    
-      // 예시로 운세 결과 페이지의 URL을 'https://your-desired-url.com/'로 설정
-      var desiredURL = 'https://your-desired-url.com/';
-      setFacebookShareURL(desiredURL);
-    
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v17.0&appId=1285820169038891&autoLogAppEvents=1";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+  <!-- 페이스북 SDK 스크립트 -->
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId: '1285820169038891',
+        xfbml: true,
+        version: 'v17.0'
+      });
+    };
 
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v17.0&appId=1285820169038891&autoLogAppEvents=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 
-      function shareOnKakaoTalk() {
-        var url = encodeURIComponent('운세 결과 페이지 주소');
-        var text = encodeURIComponent('공유할 텍스트');
-        window.open('https://talk.naver.com/share?title=' + text + '&url=' + url, '_blank');
-      }
+  <script>
 
-      function shareOnTwitter() {
-        var url = encodeURIComponent('운세 결과 페이지 주소');
-        var text = encodeURIComponent('공유할 텍스트');
-        window.open('https://twitter.com/intent/tweet?url=' + url + '&text=' + text, '_blank');
-      }
+    var desiredURL = 'https://www.naver.com/'; // 원하는 URL로 변경
 
-      function copyToClipboard() {
-          var url = encodeURIComponent('운세 결과 페이지 주소');
-          navigator.clipboard.writeText(url)
-            .then(function() {
-              alert('운세 결과가 클립보드에 복사되었습니다.');
-            })
-            .catch(function() {
-              alert('운세 결과를 복사하는데 실패했습니다.');
+    function shareOnNaver() {
+      var url = encodeURI(encodeURIComponent(desiredURL));
+      var title = encodeURI('오늘의 운세');
+      var shareLink = "https://share.naver.com/web/shareView?url=" + url
+              + "&title=" + title;
+      document.location = shareLink;
+    }
+
+    function shareOnTwitter() {
+      var url = encodeURIComponent(desiredURL);
+      var text = encodeURIComponent('오늘의 운세는');
+      window.open('https://twitter.com/intent/tweet?url=' + url + '&text=' + text, '_blank');
+    }
+
+    function copyToClipboard() {
+      var url = '오늘의 운세는 ' + desiredURL;
+      navigator.clipboard.writeText(url)
+              .then(function() {
+                alert('오늘의 운세 결과가 클립보드에 복사되었습니다.');
+              })
+              .catch(function() {
+                alert('오늘의 운세 결과를 복사하는데 실패했습니다.');
+              });
+    }
+
+    // 페이스북 공유 버튼에 적용(운세 결과 페이지의 URL을 동적으로 설정하는 함수)
+    function shareOnFacebook(url) {
+      var facebookButton = document.getElementById('facebookButton');
+      var shareLink = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url) + '&amp;src=sdkpreparse';
+      facebookButton.setAttribute('data-href', url);
+      facebookButton.querySelector('a').setAttribute('href', shareLink);
+    }
+
+  </script>
+
+  <!-- 페이스북 공유 버튼 -->
+  <span data-href="" id="facebookButton">
+	  <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+	    <div class="sns-icon facebook" onclick="shareOnFacebook(desiredURL)"></div>
+	  </a>
+	</span>
+
+  <!-- 네이버 공유 버튼 -->
+  <span>
+        <script type="text/javascript">
+            new ShareNaver.makeButton({
+              "type" : "f",
+              "title" : "오늘의 운세",
+              "url" : desiredURL,
+              "color" : "1",
+              "count" : "1",
+              "customButton" : ".sns-icon.naver"
             });
-        }
-    </script>
-
-       <!-- 페이스북 공유 버튼 -->
-    <span data-href="" id="facebookButton">
-      <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
-        <div class="sns-icon facebook"></div>
-      </a>
+        </script>
     </span>
-    
-    <script>
-      // 페이스북 공유 버튼에 적용(운세 결과 페이지의 URL을 동적으로 설정하는 함수)
-      function setFacebookShareURL(url) {
-        var facebookButton = document.getElementById('facebookButton');
-        var shareLink = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url) + '&amp;src=sdkpreparse';
-        facebookButton.setAttribute('data-href', url);
-        facebookButton.querySelector('a').setAttribute('href', shareLink);
-      }
-    
-      // 예시로 운세 결과 페이지의 URL을 임시로 'https://www.naver.com/'로 설정
-      var desiredURL = 'https://www.daum.net/';
-      setFacebookShareURL(desiredURL);
-    </script>
+  <a href="#" onclick="shareOnNaver()" >
+    <div class="sns-icon naver" ></div>
+  </a>
+  <!-- 트위터 공유 버튼 -->
+  <a href="#" onclick="shareOnTwitter()">
+    <div class="sns-icon twitter"></div>
+  </a>
+  <!-- 클립보드 공유 버튼 -->
+  <a href="#" onclick="copyToClipboard()">
+    <div class="sns-icon link"></div>
+  </a>
 
-      <!-- 카카오톡 공유 버튼 -->
-    <a href="#" onclick="shareOnKakaoTalk()">
-      <div class="sns-icon kakaotalk"></div>
-    </a>
-    
-      <!-- 트위터 공유 버튼 -->
-    <a href="#" onclick="shareOnTwitter()">
-      <div class="sns-icon twitter"></div>
-    </a>
-      <!-- 클립보드 공유 버튼 -->
-    <a href="#" onclick="copyToClipboard()">
-      <div class="sns-icon link"></div>
-    </a>
 
   </body>
 </html>
