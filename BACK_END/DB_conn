@@ -18,6 +18,7 @@ public class DB_conn {
             System.out.println("DB 연결 실패");
             e.printStackTrace();
         } finally {
+
             try {
                 if (conn != null) {
                     conn.close();
