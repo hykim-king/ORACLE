@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DB_conn {
-    public static void main(String[] args) {
+    public static void main(String [] args) {
         String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:xe";
         String username = "ELCARO";
         String password = "pcwk";
