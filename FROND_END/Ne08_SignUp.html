@@ -118,18 +118,22 @@
         <!-- 아이디 중복 체크 여부 -->
         <input type="hidden" name="idDuplication" value="idUncheck"/>
       </div> 
+      
       <div class="formGroup">
         <label for="user-nick" class="formLabel">닉네임</label>
         <input type="text" id="user-nick" placeholder="닉네임을 입력해주세요" class="inputField" maxlength="15">
       </div>
+      
       <div class="formGroup">
         <label for="user-password" class="formLabel">PW 설정</label>
         <input type="password" id="user-password" class="inputFieldPass" maxlength="20">
       </div>
+      
       <div class="formGroup">
         <label for="check-password" class="formLabel">PW 확인</label>
         <input type="password" id="check-password" class="inputFieldPass" maxlength="20">
       </div>
+      
       <div class="formGroup">
         <label for="gender" class="formLabelGender">성별</label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -139,6 +143,7 @@
         <input type="radio" name="gender" value="F" id="Female">
         <label for="Female">F</label>
       </div>
+      
       <div class="formGroup">
         <label for="MBTI" class="formLabel">MBTI</label>
         <select id="MBTI" class="inputField">
@@ -161,6 +166,7 @@
           <option value="ENTJ">ENTJ</option>
         </select>
       </div>
+      
       <div class="formGroup">
         <label for="zodiac-sign" class="formLabel">띠</label>
         <select id="zodiac-sign" class="inputField">
@@ -179,7 +185,19 @@
           <option value="zodiac_12">돼지</option>
         </select>
       </div>
+      
       <br>
-      <input type="button" value="회원 가입" class="submitButtonMember" onclick="window.open('Ne07_Login.html');">
+      <input type="button" value="회원 가입" class="submitButtonMember" onclick="openPopup();">
+
 </body>
+
+<script>
+
+function openPopup() {
+	alert('회원가입을 축하합니다')
+  window.open('Ne07_Login.html');
+}
+
+</script>
+
 </html>
