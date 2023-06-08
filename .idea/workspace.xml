@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1df30b2b-7f6f-4cf8-b61d-4cfdc83887b2" name="Changes" comment="commit">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/ORACLE.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BACK_END/DB_conn" beforeDir="false" afterPath="$PROJECT_DIR$/BACK_END/com/pcwk/ehr/DB_conn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FROND_END/Ne01_MainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/FRONT_END/Ne01_MainPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FROND_END/Ne02_QuestionMemeber.html" beforeDir="false" afterPath="$PROJECT_DIR$/FRONT_END/Ne02_QuestionMemeber.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FROND_END/Ne03_NotMember.html" beforeDir="false" afterPath="$PROJECT_DIR$/FRONT_END/Ne03_NotMember.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FROND_END/Ne04_Loading.html" beforeDir="false" afterPath="$PROJECT_DIR$/FRONT_END/Ne04_Loading.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FROND_END/Ne05_MemberResultPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/FRONT_END/Ne05_MemberResultPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FROND_END/Ne06_NotMemberResultPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/FRONT_END/Ne06_NotMemberResultPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FROND_END/Ne07_Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/FRONT_END/Ne07_Login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FROND_END/Ne08_SignUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/FRONT_END/Ne08_SignUp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FROND_END/Ne09_MyPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/FRONT_END/Ne09_MyPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FROND_END/Ne10_ResultUrl.html" beforeDir="false" afterPath="$PROJECT_DIR$/FRONT_END/Ne10_ResultUrl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FROND_END/Ne11_SharePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/FRONT_END/Ne11_SharePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FROND_END/images/facebook.png" beforeDir="false" afterPath="$PROJECT_DIR$/FRONT_END/images/facebook.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FROND_END/images/link.png" beforeDir="false" afterPath="$PROJECT_DIR$/FRONT_END/images/link.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FROND_END/images/naver.png" beforeDir="false" afterPath="$PROJECT_DIR$/FRONT_END/images/naver.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FROND_END/images/twitter.png" beforeDir="false" afterPath="$PROJECT_DIR$/FRONT_END/images/twitter.png" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="develop" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/BACK_END/DB_conn" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FROND_END/Ne11_SharePage.html" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2QrxOnVFVpBqzRpW8sgeGLdbUzN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/JSPA_home/NPZ/front/workspace/ORACLE/FROND_END/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "oracle"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\JSPA_home\NPZ\front\workspace\ORACLE\FROND_END\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\JSPA_home\NPZ\front\workspace\ORACLE\BACK_END" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1df30b2b-7f6f-4cf8-b61d-4cfdc83887b2" name="Changes" comment="" />
+      <created>1686125471923</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686125471923</updated>
+      <workItem from="1686125476796" duration="5078000" />
+      <workItem from="1686195833642" duration="407000" />
+      <workItem from="1686199477949" duration="5550000" />
+    </task>
+    <task id="LOCAL-00001" summary="file:Ne11_SharePage.html&#10;kakao버튼 -&gt; naver버튼 수정">
+      <created>1686125946969</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1686125946969</updated>
+    </task>
+    <task id="LOCAL-00002" summary="file:Ne11_SharePage.html&#10;kakao버튼 -&gt; naver버튼 수정">
+      <created>1686126309010</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686126309010</updated>
+    </task>
+    <task id="LOCAL-00003" summary="BACK_END 생성 및 DB_conn 파일 경로 이동">
+      <created>1686134748005</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686134748005</updated>
+    </task>
+    <task id="LOCAL-00004" summary="develop 브랜치 생성">
+      <created>1686200067556</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686200067556</updated>
+    </task>
+    <task id="LOCAL-00005" summary="FRONT_END로 폴더이름 변경">
+      <created>1686201675969</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686201675969</updated>
+    </task>
+    <task id="LOCAL-00006" summary="FRONT_END로 폴더이름 변경 및 FRONT_END, BACK_END source 폴더로 변경">
+      <created>1686206509607</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686206509607</updated>
+    </task>
+    <task id="LOCAL-00007" summary="commit">
+      <created>1686207218193</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686207218193</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="file:Ne11_SharePage.html&#10;kakao버튼 -&gt; naver버튼 수정" />
+    <MESSAGE value="BACK_END 생성 및 DB_conn 파일 경로 이동" />
+    <MESSAGE value="develop 브랜치 생성" />
+    <MESSAGE value="FRONT_END로 폴더이름 변경" />
+    <MESSAGE value="FRONT_END로 폴더이름 변경 및 FRONT_END, BACK_END source 폴더로 변경" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+  </component>
+</project>
