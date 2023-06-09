@@ -1,6 +1,5 @@
-package com.pcwk.ehr.user.domain;
-import com.pcwk.ehr.cmn.DTO;
-	public class UserVO extends DTO{
+package com.pcwk.ehr;
+public class UserVO {
 		private String id;
 		private String password;
 		private String nickname;
@@ -59,8 +58,8 @@ import com.pcwk.ehr.cmn.DTO;
 			this.gender = gender;
 		}
 
-		@java.lang.Override
-		public java.lang.String toString() {
+		@Override
+		public String toString() {
 			return "UserVO{" +
 					"id='" + id + '\'' +
 					", password='" + password + '\'' +
