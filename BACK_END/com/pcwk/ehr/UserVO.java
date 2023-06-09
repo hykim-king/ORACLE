@@ -7,7 +7,7 @@ import com.pcwk.ehr.cmn.DTO;
 		private int ani;
 		private int mbti;
 		private char gender;
-		private String reg_dt;// 등록일
+
 	public UserVO() {
 	}
 
@@ -59,8 +59,8 @@ import com.pcwk.ehr.cmn.DTO;
 			this.gender = gender;
 		}
 
-		@Override
-		public String toString() {
+		@java.lang.Override
+		public java.lang.String toString() {
 			return "UserVO{" +
 					"id='" + id + '\'' +
 					", password='" + password + '\'' +
