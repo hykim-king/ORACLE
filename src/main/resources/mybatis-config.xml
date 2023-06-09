@@ -8,6 +8,6 @@
   </settings>
 
   <typeAliases>
-    <typeAlias type="com.pcwk.ehr.domain.SignUpVO" alias="SignUpVO"/>
+    <typeAlias type="com.pcwk.ehr.user.domain.UserVO" alias="UserVO"/>
   </typeAliases>
 </configuration>
