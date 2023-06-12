@@ -20,7 +20,7 @@
                 </where>
  </sql>
  
- <select id="doRetrieve" parameterType="UserVO" resultType="UserVO">
+ <select id="doRetrieve" parameterType="SignUpVO" resultType="SignUpVO">
 		SELECT A.*, B.*
 		FROM(
 		    SELECT TT1.RNUM AS num,
@@ -57,7 +57,7 @@
 
  </select>
  
- <update id="update" parameterType="UserVO">
+ <update id="update" parameterType="SignUpVO">
     UPDATE hr_member          
     SET  name      =  #{name}     
 		    ,passwd    =  #{passwd}     
@@ -70,7 +70,7 @@
         user_id = #{userId}     
  </update>
  
- <select id="getAll" parameterType="UserVO" resultType="UserVO">
+ <select id="getAll" parameterType="SignUpVO" resultType="SignUpVO">
     SELECT t1.user_id as userId,                                 
 	       t1.name,                                    
 	       t1.passwd,                                  
@@ -85,25 +85,24 @@
   
  </select>
  
- <select id="getCount" parameterType="UserVO" resultType="int">
+ <select id="getCount" parameterType="SignUpVO" resultType="int">
     SELECT COUNT(*) cnt      
     FROM hr_member           
     WHERE user_id LIKE #{userId}||'%' 
  
  </select>
  
-  <resultMap type="UserVO" id="userMap">
+  <resultMap type="SignUpVO" id="userMap">
     <result column="user_id"   property="userId"/>
     <result column="name"      property="name"/>
     <result column="passwd"    property="passwd"/>
-    <result column="hr_level"  property="intLevel"/>
     <result column="login"     property="login"/>
     <result column="recommend" property="recommend"/>
     <result column="email"     property="email"/>
     <result column="reg_dt"    property="reg_dt"/>
   </resultMap>
   
-  <select id="get" parameterType="UserVO" resultMap="userMap">
+  <select id="get" parameterType="SignUpVO" resultMap="userMap">
     SELECT                                             
        t1.user_id,                                 
        t1.name,                                    
@@ -119,7 +118,7 @@
     
   </select>
 
-  <insert id="add" parameterType="UserVO">
+  <insert id="add" parameterType="SignUpVO">
 	 INSERT INTO hr_member (
 		   user_id,           
 		   name,              
@@ -141,7 +140,7 @@
 		)                      
   </insert>
 		    
-  <delete id="deleteOne" parameterType="UserVO">
+  <delete id="deleteOne" parameterType="SignUpVO">
     DELETE FROM hr_member
     WHERE user_id = #{userId}
   </delete>
