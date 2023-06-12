@@ -1,7 +1,7 @@
-package com.pcwk.ehr.controller;
+package com.pcwk.ehr.user.controller;
 
-import com.pcwk.ehr.user.domain.MBTIVO;
 import com.pcwk.ehr.user.service.MBTIService;
+import com.pcwk.ehr.user.domain.MBTIVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

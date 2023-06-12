@@ -1,4 +1,4 @@
-package com.pcwk.ehr.service;
+package com.pcwk.ehr.user.service;
 
 import com.pcwk.ehr.user.dao.MBTIDaoImpl;
 import com.pcwk.ehr.user.dao.UserDaoImpl;
