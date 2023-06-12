@@ -1,4 +1,4 @@
-package com.pcwk.ehr.dao;
+package com.pcwk.ehr.user.dao;
 
 import com.pcwk.ehr.user.domain.Level;
 import com.pcwk.ehr.user.domain.MBTIVO;
