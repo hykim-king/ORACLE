@@ -21,7 +21,7 @@ import org.springframework.stereotype.Repository;
 import com.pcwk.ehr.domain.SignUpVO;
 
 @Repository
-public class ResultImpl implements SignUpDao {
+public class ResultImpl implements ResultDao {
 
 	final String NAMESPACE = "com.pcwk.ehr.user";
 	final String DOT       = ".";
