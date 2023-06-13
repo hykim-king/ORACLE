@@ -7,6 +7,8 @@ import com.pcwk.ehr.domain.SignUpVO;
 
 public interface ResultDao {
 
+	String fetchDesiredURL(String userID);
+
 	public List<SignUpVO> doRetrieve(SignUpVO search)throws SQLException;
 
 	int update(SignUpVO user) throws SQLException;
