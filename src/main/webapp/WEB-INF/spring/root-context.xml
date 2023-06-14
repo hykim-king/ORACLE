@@ -59,7 +59,7 @@
   </bean>
   
   <!-- Advice 부가기능 : logging -->
-  <!-- <bean id="aroundAdvice" class="com.pcwk.ehr.aspect.PerformanceAroundAdvice"></bean> -->
+   <bean id="aroundAdvice" class="com.pcwk.ehr.aspect.PerformanceAroundAdvice"></bean>
   
   <!-- 성능측정 -->
   <aop:config>

@@ -1,5 +1,6 @@
 package com.pcwk.ehr.controller;
 
+import com.pcwk.ehr.dao.ResultDao;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,12 +13,13 @@ import java.util.Random;
 @Controller
 public class ResultController {
 
-    @GetMapping("/desiredURL")
-    public String fetchDesiredURL(@RequestParam("ID") String ID) {
-        // 여기에서 userID를 활용하여 ID가 일치하는 URL을 가져온 후 반환합니다.
-        // 예시로 "https://example.com"을 반환하도록 설정합니다.
-        String desiredURL = resultDao.fetchDesiredURL(ID);
-        return desiredURL;
+    private ResultDao resultDao;
+
+    @GetMapping("/")
+    public String home(Model model) {
+        List<Integer> randomNumbers = generateRandomNumbers(5, 1, 60);
+        model.addAttribute("randomNumbers", randomNumbers);
+        return "user/result_mng.jsp";
     }
 
     private List<Integer> generateRandomNumbers(int count, int min, int max) {

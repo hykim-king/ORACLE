@@ -35,22 +35,6 @@ public class ResultImpl implements ResultDao {
 	// *** default 생성
 	public ResultImpl() {}
 
-	@Override
-	public String fetchDesiredURL(String userID) {
-		String desiredURL = "";
-		String statement = NAMESPACE + DOT + "fetchDesiredURL";
-		LOG.debug("┌───────────────┐");
-		LOG.debug("│statement" + statement);
-		LOG.debug("└───────────────┘");
-
-		desiredURL = sqlSessionTemplate.selectOne(statement, userID);
-
-		LOG.debug("┌───────────────┐");
-		LOG.debug("│desiredURL" + desiredURL);
-		LOG.debug("└───────────────┘");
-
-		return desiredURL;
-	}
 	public List<SignUpVO> doRetrieve(SignUpVO search)throws SQLException{
 		List<SignUpVO> list = new ArrayList<SignUpVO>();
 		
