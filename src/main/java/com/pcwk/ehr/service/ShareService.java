@@ -1,6 +1,6 @@
 package com.pcwk.ehr.service;
 
-import com.pcwk.ehr.user.domain.ShareVO;
+import com.pcwk.ehr.domain.ShareVO;
 
 public interface ShareService {
     String fetchDesiredURL(String userID);

@@ -1,7 +1,7 @@
 package com.pcwk.ehr.service;
 
-import com.pcwk.ehr.user.dao.ShareDao;
-import com.pcwk.ehr.user.domain.ShareVO;
+import com.pcwk.ehr.dao.ShareDao;
+import com.pcwk.ehr.domain.ShareVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

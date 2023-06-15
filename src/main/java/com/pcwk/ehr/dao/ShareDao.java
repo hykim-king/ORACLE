@@ -1,6 +1,6 @@
 package com.pcwk.ehr.dao;
 
-import com.pcwk.ehr.user.domain.ShareVO;
+import com.pcwk.ehr.domain.ShareVO;
 import org.springframework.stereotype.Repository;
 
 @Repository
