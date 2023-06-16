@@ -7,7 +7,7 @@
     <setting name="logImpl" value="LOG4J2"/>
   </settings>
 
-  <typeAliases>
+  <!-- <typeAliases>
     <typeAlias type="com.pcwk.ehr.domain.SignUpVO" alias="SignUpVO"/>
-  </typeAliases>
+  </typeAliases> -->
 </configuration>
