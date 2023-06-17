@@ -23,7 +23,7 @@ public class Result_UrlController {
 		List<Result_UrlVO> list = resultUrlService.resultSelect(search);
 		model.addAttribute("list", list);
 
-		return "user/Ne_10ResultUrl";
+		return "user/Ne_10ResultUrl"; 
 	}
 
 
