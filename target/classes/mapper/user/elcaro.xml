@@ -15,7 +15,7 @@
         WHERE a.id = #{Id}
     </select>
     
-    <insert id="urlInsert" parameterType="shareVO" >
+<!--    <insert id="urlInsert" parameterType="shareVO" >
         INSERT INTO url_tb (
         seq,
         result_date,
@@ -28,6 +28,17 @@
         #{Id}
         );
 
-    </insert>
+    </insert>-->
+
+    <select id="urlSelect" parameterType="shareVO" resultType="shareVO">
+        SELECT
+        u.seq,
+        u.url
+        FROM
+        account_tb a
+        JOIN url_tb u ON a.id = u.id
+        WHERE
+        seq = (SELECT MAX(seq) FROM url_tb WHERE id = #{Id})
+    </select>
  
 </mapper>

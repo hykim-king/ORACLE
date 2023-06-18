@@ -27,18 +27,18 @@
 			value="classpath:mapper/**/*.xml"></property>
 	</bean>
 
-	<!-- 트랜잭션 어드바이스 설정 지금까지 Advice는 직접 구현 했었다. 하지만 트랜잭션 관리 기능의 어드바이스는 직접 구현하지 
-		않는다. 스프링 컨테이너가 <tx:advice를 참조 해서 자동 생성한다. -->
+<!--	 트랜잭션 어드바이스 설정 지금까지 Advice는 직접 구현 했었다. 하지만 트랜잭션 관리 기능의 어드바이스는 직접 구현하지
+		않는다. 스프링 컨테이너가 <tx:advice를 참조 해서 자동 생성한다.
 	<tx:advice id="txAdvice"
 		transaction-manager="transactionManager">
 		<tx:attributes>
-			<!-- do*로 시작하는 메서드는 트랜잭션관리 대상에서 제외 -->
+			&lt;!&ndash; do*로 시작하는 메서드는 트랜잭션관리 대상에서 제외 &ndash;&gt;
 			<tx:method name="do*" read-only="true" />
-			<!-- up*시작하는 메서드는 트랜잭션 관리 대상이다. -->
+			&lt;!&ndash; up*시작하는 메서드는 트랜잭션 관리 대상이다. &ndash;&gt;
 			<tx:method name="up*" read-only="false"
 				rollback-for="Excetion" />
 		</tx:attributes>
-	</tx:advice>
+	</tx:advice>-->
 
 	<!-- pointcut+advice = adviser * com.pcwk.ehr.업무.service.*Impl.up*(..) -->
 

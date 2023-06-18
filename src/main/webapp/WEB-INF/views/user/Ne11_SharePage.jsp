@@ -70,6 +70,7 @@
     </div>
 </div>
 
+
 <!-- 페이스북 SDK 스크립트 -->
 <div id="fb-root"></div>
 <script>
@@ -92,7 +93,7 @@
 
 <script>
 
-    var desiredURL = 'https://www.naver.com/'; // 원하는 URL로 변경
+    var desiredURL = "${list[0].url}"; // 원하는 URL로 변경
 
     function shareOnNaver() {
         var url = encodeURI(encodeURIComponent(desiredURL));
