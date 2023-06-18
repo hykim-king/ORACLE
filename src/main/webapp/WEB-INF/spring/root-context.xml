@@ -40,7 +40,7 @@
 		</tx:attributes>
 	</tx:advice>
 
-	<!-- pointcut+adice = adviser * com.pcwk.ehr.업무.service.*Impl.up*(..) -->
+	<!-- pointcut+advice = adviser * com.pcwk.ehr.업무.service.*Impl.up*(..) -->
 
 	<!-- database.properties -->
 
