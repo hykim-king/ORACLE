@@ -14,5 +14,20 @@
                  JOIN mbti_tb m ON a.mbti = m.mbti
         WHERE a.id = #{Id}
     </select>
+    
+    <insert id="urlInsert" parameterType="shareVO" >
+        INSERT INTO url_tb (
+        seq,
+        result_date,
+        url,
+        id
+        ) VALUES (
+        url_seq.nextval,
+        sysdate,
+        #{url},
+        #{Id}
+        );
+
+    </insert>
  
 </mapper>

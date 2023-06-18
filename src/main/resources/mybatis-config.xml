@@ -2,6 +2,7 @@
 <!DOCTYPE configuration
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-config.dtd">
+  
 <configuration>
   <settings>
     <setting name="logImpl" value="LOG4J2"/>
@@ -12,5 +13,9 @@
 
   <typeAliases>
     <typeAlias type="com.pcwk.ehr.resultUrl.Result_UrlVO" alias="Result_Url_VO"/>
+    <typeAlias type="com.pcwk.ehr.share.shareVO" alias="shareVO"/>
   </typeAliases>
+
+  
+  
 </configuration>
