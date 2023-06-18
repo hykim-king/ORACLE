@@ -72,12 +72,10 @@
 <h1 class="location1">저희 회원이신가요?</h1>
 <br>
 <br>
+<div>
 <center>
     <img src="/Oracle/image/select.PNG" alt="선택의 시간" width="30%">
     <div>
-        <br>
-        <br>
-        <br>
         <input class="location2 w-btn-outline w-btn-yellow-outline" type="button" value="회원 로그인" onclick="window.open('Ne07_Login.html');">
         <input class="location2 w-btn-outline w-btn-yellow-outline" type="button" value="비회원으로 하기" onclick="window.open('Ne03_NotMember.html');">
 </center>
