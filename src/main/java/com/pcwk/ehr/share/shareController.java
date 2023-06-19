@@ -1,4 +1,4 @@
-package com.pcwk.ehr.resultUrl;
+package com.pcwk.ehr.share;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -10,20 +10,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-public class Result_UrlController {
+public class shareController {
 	
 	@Autowired
-	Result_UrlService resultUrlService;
+	shareService shareService;
 
-	@RequestMapping(value = "/ELCARO/resultSelect.do")
-	public String resultSelect(Result_UrlVO search, Model model) throws SQLException{
+	@RequestMapping(value = "/ELCARO/urlSelect.do")
+	public String urlSelect(shareVO search, Model model) throws SQLException{
 
 		System.out.println("Client request received: " + search.toString());
 
-		List<Result_UrlVO> list = resultUrlService.resultSelect(search);
+		List<shareVO> list = shareService.urlSelect(search);
 		model.addAttribute("list", list);
 
-		return "user/Ne10_ResultUrl";
+		return "user/Ne11_SharePage";
 	}
 
 
