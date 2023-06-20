@@ -4,7 +4,7 @@
     "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.pcwk.ehr">
  
-     <select id="resultSelect" parameterType="Result_Url_VO" resultType="Result_Url_VO">
+     <select id="resultSelect" parameterType="Result_UrlVO" resultType="Result_UrlVO">
         SELECT a.nickname,
                u.result_date,
                u.url,
