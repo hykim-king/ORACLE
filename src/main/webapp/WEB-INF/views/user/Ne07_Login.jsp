@@ -59,7 +59,7 @@
                      alert(paredJSON.msgContents);
                      
                      //javascript 내장 객체: url
-                     window.location.href ="${CP}/user/";
+                     window.location.href ="${CP}/ELCARO/resultSelect.do";
                   }  
                  
                  

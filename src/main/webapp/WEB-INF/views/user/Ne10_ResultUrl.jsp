@@ -93,6 +93,7 @@
         <h1>
             <span id="username" style="font-weight: bold;"></span>님
             <span style="font-weight: lighter;"> 어서오세요</span>
+            
         </h1>
     </fieldset>
 </div>
