@@ -77,4 +77,9 @@
 
   </resultMap>
  
+    <select id="notMemberInsert" parameterType="notMemberVO">
+        INSERT INTO account_tb(mbti, nickname, gender, ani)
+        values (#{mbti}, #{nickname}, #{gender}, #{ani})
+        
+    </select>
 </mapper>
