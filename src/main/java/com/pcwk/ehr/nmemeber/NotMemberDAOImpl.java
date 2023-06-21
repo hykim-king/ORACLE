@@ -8,11 +8,8 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.pcwk.ehr.user.dao.UserDao;
-import com.pcwk.ehr.user.domain.UserVO;
-
 @Repository
-public abstract class NotMemberDAOImpl implements UserDao {
+public abstract class NotMemberDAOImpl implements NotMemberDAO {
 
 	final String NAMESPACE = "com.pcwk.ehr.user";
 	final String DOT       = ".";
@@ -24,8 +21,7 @@ public abstract class NotMemberDAOImpl implements UserDao {
 	//**** default 생성
 	public NotMemberDAOImpl() {}
 	 
-	@Override
-	public int update(UserVO user)throws SQLException{
+	public int update(NotMemberVO user)throws SQLException{
 		int flag = 0;
 		String statement = this.NAMESPACE+DOT+"update";
 		LOG.debug("1. statement-"+statement);
@@ -39,8 +35,7 @@ public abstract class NotMemberDAOImpl implements UserDao {
 	}
 
 	//데이터 추가
-	@Override
-	public int add(final UserVO user)throws SQLException{
+	public int add(final NotMemberVO user)throws SQLException{
 		int flag = 0;//등록 건수
 
 		String statement  = this.NAMESPACE+DOT+"add";
