@@ -14,5 +14,36 @@
                  JOIN mbti_tb m ON a.mbti = m.mbti
         WHERE a.id = #{Id}
     </select>
+    
+<!--    <insert id="urlInsert" parameterType="shareVO" >
+        INSERT INTO url_tb (
+        seq,
+        result_date,
+        url,
+        id
+        ) VALUES (
+        url_seq.nextval,
+        sysdate,
+        #{url},
+        #{Id}
+        );
+
+    </insert>-->
+
+    <select id="urlSelect" parameterType="shareVO" resultType="shareVO">
+        SELECT
+        u.seq,
+        u.url
+        FROM
+        account_tb a
+        JOIN url_tb u ON a.id = u.id
+        WHERE
+        seq = (SELECT MAX(seq) FROM url_tb WHERE id = #{Id})
+    </select>
  
+    <select id="notMemberInsert" parameterType="notMemberVO">
+        INSERT INTO account_tb(mbti, nickname, gender, ani)
+        values (#{mbti}, #{nickname}, #{gender}, #{ani})
+        
+    </select>
 </mapper>
