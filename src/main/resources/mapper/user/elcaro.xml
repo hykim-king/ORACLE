@@ -5,6 +5,17 @@
 <mapper namespace="com.pcwk.ehr">
 
 
+ <select id="get" parameterType="LogInVO" resultMap="userMap">
+			SELECT
+						id,
+						nickname
+			FROM
+						account_tb
+			WHERE id = #{userId}                           
+ 
+ </select>
+
+
      <select id="passCheck" parameterType="LogInVO" resultType="int">
     SELECT count(*) cnt
     FROM
@@ -59,5 +70,11 @@
         WHERE
         seq = (SELECT MAX(seq) FROM url_tb WHERE id = #{Id})
     </select>
+    
+  <resultMap type="LoginVO" id="userMap">
+    <result column="id" property="userId" />
+    <result column="password" property="passwd" />
+
+  </resultMap>
  
 </mapper>

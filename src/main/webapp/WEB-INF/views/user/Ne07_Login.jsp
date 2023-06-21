@@ -36,17 +36,17 @@
                 
                 
                   let paredJSON = JSON.parse(data)
-                  console.log("paredJSON.msgId:"+paredJSON.megId);
+                  console.log("paredJSON.msgId:"+paredJSON.msgId);
                  // console.log("success data:"+data);
                  
-                 if("1" == paredJSON.megId || "10" == paredJSON.megId){
+                 if("1" == paredJSON.msgId || "10" == paredJSON.msgId){
                    alert(paredJSON.msgContents);
                    //jquery focus
                    $('#userId').focus();
                    return;
                  }
                  
-                 if("2" == paredJSON.megId || "20" == paredJSON.megId){
+                 if("2" == paredJSON.msgId || "20" == paredJSON.msgId){
                      alert(paredJSON.msgContents);
                      //jquery focus
                      $('#userId').focus();
@@ -55,12 +55,12 @@
                  
                  console.log("paredJSON.msgContents:"+paredJSON.msgContents);
                  //로그인 성공
-                 if("30" == paredJSON.megId ){
+                 if("30" == paredJSON.msgId ){
                      alert(paredJSON.msgContents);
                      
                      //javascript 내장 객체: url
-                     window.location.href ="${CP}/user/doRetrieve.do";
-                 }  
+                     window.location.href ="${CP}/user/";
+                  }  
                  
                  
                  

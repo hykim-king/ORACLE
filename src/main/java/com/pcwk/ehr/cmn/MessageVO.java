@@ -1,23 +1,23 @@
 package com.pcwk.ehr.cmn;
 
 public class MessageVO extends DTO {
-	private String megId;//메시지 id
+	private String msgId;//메시지 id
 	private String msgContents; //세미지
 	
 	public MessageVO() {}
 
 	public MessageVO(String megId, String msgContents) {
 		super();
-		this.megId = megId;
+		this.msgId = megId;
 		this.msgContents = msgContents;
 	}
 
 	public String getMegId() {
-		return megId;
+		return msgId;
 	}
 
 	public void setMegId(String megId) {
-		this.megId = megId;
+		this.msgId = megId;
 	}
 
 	public String getMsgContents() {
@@ -30,7 +30,7 @@ public class MessageVO extends DTO {
 
 	@Override
 	public String toString() {
-		return "MessageVO [megId=" + megId + ", msgContents=" + msgContents + "]";
+		return "MessageVO [megId=" + msgId + ", msgContents=" + msgContents + "]";
 	}
 	
 	

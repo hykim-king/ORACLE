@@ -85,6 +85,7 @@ public class LoginContoller {
 			// 사용자 정보 조회 : seesion처리
 			// --------------------------------------------------
 			LoginVO userinfo = loginService.get(user);
+			LOG.debug("sesstion"+userinfo);
 			if (null != userinfo) {
 				httpsession.setAttribute("user", userinfo);
 			} else {

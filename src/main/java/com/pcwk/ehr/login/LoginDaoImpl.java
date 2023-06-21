@@ -20,6 +20,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 
+
 @Repository
 public class LoginDaoImpl implements LoginDao {
 
@@ -48,7 +49,7 @@ public class LoginDaoImpl implements LoginDao {
 		LOG.debug("└──────────────────────────┘");
 		flag = this.sqlSessionTemplate.selectOne(statement, user);
 		LOG.debug("┌──────────────────────────┐");
-		LOG.debug("│ 3. flag                  │" + flag);
+		LOG.debug("│ 3. idCheck flag  1/0     │" + flag);
 		LOG.debug("└──────────────────────────┘");
 
 		return flag;
@@ -67,10 +68,28 @@ public class LoginDaoImpl implements LoginDao {
 		LOG.debug("└──────────────────────────┘");
 		cnt = this.sqlSessionTemplate.selectOne(statement, user);
 		LOG.debug("┌──────────────────────────┐");
-		LOG.debug("│ 3. cnt                   │" + cnt);
+		LOG.debug("│ 3. passCheck cnt   1/0   │" + cnt);
 		LOG.debug("└──────────────────────────┘");
 
 		return cnt;
+	}
+
+	@Override
+	@SuppressWarnings("deprecation")
+	public LoginVO get(LoginVO user )throws SQLException{
+		LoginVO outVO = null;
+		
+        String statement = this.NAMESPACE+DOT+"get";
+		LOG.debug("----------------------------");
+		LOG.debug("1. statement-"+statement);
+		LOG.debug("----------------------------");
+		LOG.debug("2. param=\n"+user.toString());
+		
+		outVO = this.sqlSessionTemplate.selectOne(statement,user);
+		LOG.debug("3.outVO:"+outVO);
+		
+	
+		return outVO;
 	}
 
 }

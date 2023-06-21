@@ -35,7 +35,7 @@ public class shareVO {
     @java.lang.Override
     public java.lang.String toString() {
         return "shareVO{" +
-                ", url='" + url + '\'' +
+                "url='" + url + '\'' +
                 '}';
     }
 }

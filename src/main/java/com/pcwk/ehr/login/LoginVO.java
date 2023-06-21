@@ -27,7 +27,6 @@ public class LoginVO {
 	public java.lang.String toString() {
 		return "LogInVO{" +
 				"userId='" + userId + '\'' +
-				", passwd='" + passwd + '\'' +
 				'}';
 	}
 }

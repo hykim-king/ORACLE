@@ -35,6 +35,7 @@ public class shareDaoImpl implements shareDao {
 		LOG.debug("2. search"+search);
 
 		list = sqlSessionTemplate.selectList(statement, search);
+		LOG.debug("-------------------------list :"+list);
 		for (shareVO vo : list) {
 			LOG.debug("3. vo="+vo);
 		}
