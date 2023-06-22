@@ -6,11 +6,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
-<link rel="stylesheet" href="NotMemberCSS.css">
+<link rel="stylesheet" href="../resources/NotMemberCSS/NotMemberCSS.css" type="text/css">
 </head>
 
 <body>
-  <h2 class="title">MBTI를 입력하세요</h2>
+  <h2 class="title" style="text-align: center;">MBTI를 입력하세요</h2>
   <div style="text-align: center;">
     <form onsubmit="return submitForm()">
       <select id="mbti" name="mbti">
@@ -32,12 +32,12 @@
         <option value="ENFJ">ENFJ</option>
         <option value="ENFP">ENFP</option>
       </select>
-      <h2 style="text-align: center;">닉네임을 입력하세요</h2>
+      <h2 class="title" style="text-align: center;">닉네임을 입력하세요</h2>
       <input id="nickname" class="name" maxlength="30" required="" size="10" type="text" />
-      <h2 style="text-align: center;">성별을 입력하세요</h2>
+      <h2 class="title" style="text-align: center;">성별을 입력하세요</h2>
       <input name="gender" value="남자" type="radio" /> 남자
       <input name="gender" value="여자" type="radio" /> 여자
-      <h2 style="text-align: center;">띠를 입력하세요</h2>
+      <h2 class="title" style="text-align: center;">띠를 입력하세요</h2>
       <select id="ani" name="ani">
         <option style="text-align: center;" value="none">=== 선택 ===</option>
         <option value="mouse">쥐띠</option>
@@ -53,7 +53,7 @@
         <option value="dog">개띠</option>
         <option value="pig">돼지띠</option>
       </select>
-      <h2 style="text-align: center;">현재(서버시간)의 네 팔자야</h2>
+      <h2 class="title" style="text-align: center;">현재(서버시간)의 네 팔자야</h2>
       <div style="text-align: center;">
         <button class="config" type="submit" onclick="location.href='Ne06_NotMemberResultPage.html'">운세 확인</button>
       </div>
