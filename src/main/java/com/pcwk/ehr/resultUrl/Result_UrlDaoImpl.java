@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class Result_UrlDaoImpl implements Result_UrlDao {
 	
-	final String NAMESPACE = "com.pcwk.ehr";
+	final String NAMESPACE = "com.pcwk.ehr.resultUrl";
 	final String DOT = ".";
 	
 	@Autowired
