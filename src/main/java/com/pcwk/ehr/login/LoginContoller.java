@@ -87,7 +87,8 @@ public class LoginContoller {
 			LoginVO userinfo = loginService.get(user);
 			LOG.debug("sesstion"+userinfo);
 			if (null != userinfo) {
-				httpsession.setAttribute("user", userinfo);
+				httpsession.setAttribute("user", userinfo.getUserId());
+				LOG.debug("-------------userinfo------------"+userinfo.getUserId());
 			} else {
 				message.setMegId("99");
 				message.setMsgContents("알수 없는 오류");

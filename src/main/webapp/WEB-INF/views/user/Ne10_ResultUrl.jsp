@@ -92,8 +92,7 @@
     <fieldset>
         <h1>
             <span id="username" style="font-weight: bold;"></span>님
-            <span style="font-weight: lighter;"> 어서오세요</span>
-            
+            <span style="font-weight: lighter;"> 어서오세요 </span>
         </h1>
     </fieldset>
 </div>
@@ -130,7 +129,7 @@
 </div>
 
 <script>
-    var nickname = "${list[0].nickname}";
+    var nickname = "${sessionScope.user}";
 
     // HTML 요소에 동적으로 이름 삽입
     var usernameElement = document.getElementById("username");
