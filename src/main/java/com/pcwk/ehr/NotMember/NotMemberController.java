@@ -14,7 +14,7 @@ public class NotMemberController {
 	@Autowired
 	NotMemberService notMemberService;
 	
-	@RequestMapping(value = "/User/notMemberInsert.do")
+	@RequestMapping(value = "/user/notMemberInsert.do")
 	public String notMemberInsert(NotMemberVO notMember, Model model) throws SQLException{
 		
 		notMemberService.insert(notMember);
