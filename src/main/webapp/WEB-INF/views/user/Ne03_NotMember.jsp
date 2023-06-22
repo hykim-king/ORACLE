@@ -70,7 +70,7 @@
      var gender = document.querySelector('input[name="gender"]:checked');
      var ani = document.getElementById("ani").value;
 
-     if (mbti === "none" || nickname.trim() === "" || !gender || ani === "none") {
+     if (mbti === "none" || !nickname || !gender || ani === "none") {
          alert("입력되지 않은 정보가 있습니다. 모든 항목을 입력해주세요.");
          return false;
      }
