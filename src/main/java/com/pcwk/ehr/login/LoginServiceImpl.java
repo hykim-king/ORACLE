@@ -25,6 +25,7 @@ import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
 
+
 @Service
 public class LoginServiceImpl implements LoginService {
 	final Logger LOG = LogManager.getLogger(getClass());
@@ -34,6 +35,8 @@ public class LoginServiceImpl implements LoginService {
 
 	public LoginServiceImpl() {
 	}
+	
+
 
 	@Override
 	public int doLogin(LoginVO user) throws SQLException {
@@ -63,11 +66,13 @@ public class LoginServiceImpl implements LoginService {
 
 		return checkStatus;
 	}
-
+	
 	@Override
 	public LoginVO get(LoginVO user) throws SQLException, ClassNotFoundException {
-
-		return null;
+		// TODO Auto-generated method stub
+		return loginDao.get(user);
 	}
+
+
 
 }

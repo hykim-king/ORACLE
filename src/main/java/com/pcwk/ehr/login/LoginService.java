@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 
+
 public interface LoginService {
 
 	/**
@@ -22,6 +23,7 @@ public interface LoginService {
 	 * @throws ClassNotFoundException
 	 * @throws SQLException
 	 */
-	public LoginVO get(LoginVO user) throws SQLException, ClassNotFoundException;
+	LoginVO get(LoginVO user) throws SQLException, ClassNotFoundException;
+	
 
 }

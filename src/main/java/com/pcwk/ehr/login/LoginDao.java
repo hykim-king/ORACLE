@@ -21,5 +21,8 @@ public interface LoginDao {
 	 * @throws SQLException
 	 */
 	public int idCheck(LoginVO user)throws SQLException;
+	
+	
+	LoginVO get(LoginVO user) throws ClassNotFoundException, SQLException;
 
 }

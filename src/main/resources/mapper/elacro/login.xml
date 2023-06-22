@@ -2,7 +2,18 @@
 <!DOCTYPE mapper
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.pcwk.ehr">
+<mapper namespace="com.pcwk.ehr.login">
+
+
+ <select id="get" parameterType="LogInVO" resultMap="userMap">
+			SELECT
+						id,
+						nickname
+			FROM
+						account_tb
+			WHERE id = #{userId}                           
+ 
+ </select>
 
 
      <select id="passCheck" parameterType="LogInVO" resultType="int">
@@ -59,10 +70,16 @@
         WHERE
         seq = (SELECT MAX(seq) FROM url_tb WHERE id = #{Id})
     </select>
+    
+  <resultMap type="LoginVO" id="userMap">
+    <result column="id" property="userId" />
+    <result column="password" property="passwd" />
+
+  </resultMap>
  
-    <select id="notMemberInsert" parameterType="notMemberVO">
+<!--     <select id="notMemberInsert" parameterType="notMemberVO">
         INSERT INTO account_tb(mbti, nickname, gender, ani)
         values (#{mbti}, #{nickname}, #{gender}, #{ani})
         
-    </select>
+    </select> -->
 </mapper>
