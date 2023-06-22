@@ -60,4 +60,9 @@
         seq = (SELECT MAX(seq) FROM url_tb WHERE id = #{Id})
     </select>
  
+    <select id="notMemberInsert" parameterType="notMemberVO">
+        INSERT INTO account_tb(mbti, nickname, gender, ani)
+        values (#{mbti}, #{nickname}, #{gender}, #{ani})
+        
+    </select>
 </mapper>

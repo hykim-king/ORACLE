@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="UTF-8">
+
 <style id="fullpage_styles">
 @font-face {
     font-family: 'Cafe24Dongdong';
@@ -58,6 +58,51 @@ button {
 }
 </style>
 
+<script>
+    function submitForm() {
+        var validMbtiValues = ["ISTJ", "ISTP", "ISFJ", "ISFP", "INTJ", "INTP", "INFJ", "INFP", "ESTJ", "ESTP", "ESFJ", "ESFP", "ENTJ", "ENTP", "ENFJ", "ENFP"];
+        var validAniValues = ["mouse", "cow", "tiger", "rabbit", "dragon", "snake", "horse", "sheep", "monkey", "chicken", "dog", "pig"];
+
+        var mbti = document.getElementById("mbti").value;
+        var nickname = document.getElementById("nickname").value;
+        var gender = document.querySelector('input[name="gender"]:checked');
+        var ani = document.getElementById("ani").value;
+
+        if (mbti === "none" || nickname.trim() === "" || !gender || ani === "none") {
+            alert("입력되지 않은 정보가 있습니다. 모든 항목을 입력해주세요.");
+            return false;
+        }
+
+        if (!validMbtiValues.includes(mbti)) {
+            alert("유효한 MBTI를 선택해주세요.");
+            return false;
+        }
+        
+        if (nickname.trim() === "") {
+            alert("닉네임을 입력해주세요.");
+            return false;
+        }
+
+        if (!validAniValues.includes(ani)) {
+            alert("유효한 띠를 선택해주세요.");
+            return false;
+        }
+
+        if (gender.value !== "남자" && gender.value !== "여자") {
+            alert("성별을 선택해주세요.");
+            return false;
+        }
+
+        var result = confirm("입력한 정보를 전송하시겠습니까?");
+        if (result) {
+            // 정보 전송을 위한 AJAX 요청 등의 처리
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+
 </head>
 <body>
   <h2 style="text-align: center;">MBTI를 입력하세요</h2>
@@ -109,51 +154,5 @@ button {
       </div>
     </form>
   </div>
-  
-  <script>
-    function submitForm() {
-        var validMbtiValues = ["ISTJ", "ISTP", "ISFJ", "ISFP", "INTJ", "INTP", "INFJ", "INFP", "ESTJ", "ESTP", "ESFJ", "ESFP", "ENTJ", "ENTP", "ENFJ", "ENFP"];
-        var validAniValues = ["mouse", "cow", "tiger", "rabbit", "dragon", "snake", "horse", "sheep", "monkey", "chicken", "dog", "pig"];
-
-        var mbti = document.getElementById("mbti").value;
-        var nickname = document.getElementById("nickname").value;
-        var gender = document.querySelector('input[name="gender"]:checked');
-        var ani = document.getElementById("ani").value;
-
-        if (mbti === "none" || nickname.trim() === "" || !gender || ani === "none") {
-            alert("입력되지 않은 정보가 있습니다. 모든 항목을 입력해주세요.");
-            return false;
-        }
-
-        if (!validMbtiValues.includes(mbti)) {
-            alert("유효한 MBTI를 선택해주세요.");
-            return false;
-        }
-        
-        if (nickname.trim() === "") {
-            alert("닉네임을 입력해주세요.");
-            return false;
-        }
-
-        if (!validAniValues.includes(ani)) {
-            alert("유효한 띠를 선택해주세요.");
-            return false;
-        }
-
-        if (gender.value !== "남자" && gender.value !== "여자") {
-            alert("성별을 선택해주세요.");
-            return false;
-        }
-
-        var result = confirm("입력한 정보를 전송하시겠습니까?");
-        if (result) {
-            // 정보 전송을 위한 AJAX 요청 등의 처리
-            return true;
-        } else {
-            return false;
-        }
-    }
-</script>
-  
 </body>
 </html>
