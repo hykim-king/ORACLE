@@ -65,9 +65,9 @@
 <body>
 <div style="text-align: center;"><button class="NAEPALZZAYA" type="submit">NAE PAL ZZA YA</button></div>
 <div>&nbsp;</div>
-<div style="text-align: center;"><img src="/Oracle/image/daemoon.png" alt="대문이미지" /></div>
+<div style="text-align: center;"><img src="../resources/images/daemoon.png" alt="대문이미지" /></div>
 <div>&nbsp;</div>
 <div style="text-align: center;"><button class="YES" type="submit"
-                                         onclick="location.href='Ne02_QuestionMemeber.html'"> YES</button>&nbsp;<button class="NO" type="button">NO</button></div>
+                                         onclick="location.href='Ne02_QuestionMemeber.html'"> YES</button>&nbsp;<button class="NO" type="submit" onclick="location.href='https://answer.moaform.com/answers/EnPBng'">NO</button></div>
 </body>
 </html>
