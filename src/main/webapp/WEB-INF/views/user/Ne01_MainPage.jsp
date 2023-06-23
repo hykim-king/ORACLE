@@ -33,6 +33,12 @@
             margin: 4px 2px;
             border-radius: 5px;
         }
+        
+        .MBTI {
+            font-family: 'NeoDunggeunmo';
+            font-size: 32px;
+            padding: 20px;
+        }
 
         .YES {
             font-family: 'NeoDunggeunmo';
