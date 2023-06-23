@@ -1,4 +1,4 @@
-package com.pcwk.ehr.main;
+package com.pcwk.ehr.MainPage;
 
 public interface MainPageService {
 

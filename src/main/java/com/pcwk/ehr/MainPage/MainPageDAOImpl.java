@@ -1,4 +1,4 @@
-package com.pcwk.ehr.main;
+package com.pcwk.ehr.MainPage;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;

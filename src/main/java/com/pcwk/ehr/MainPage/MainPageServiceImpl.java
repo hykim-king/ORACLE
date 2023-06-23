@@ -1,4 +1,4 @@
-package com.pcwk.ehr.main;
+package com.pcwk.ehr.MainPage;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
