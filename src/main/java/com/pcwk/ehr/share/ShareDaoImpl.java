@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class ShareDaoImpl2 implements ShareDao2 {
+public class ShareDaoImpl implements ShareDao {
 
 	final Logger LOG = LogManager.getLogger(getClass());
 
@@ -21,7 +21,7 @@ public class ShareDaoImpl2 implements ShareDao2 {
 	@Autowired
 	SqlSessionTemplate sqlSessionTemplate;//DB연결객체
 
-	public ShareDaoImpl2() {}
+	public ShareDaoImpl() {}
 
 	public List<ShareVO> shareDesiredURL(ShareVO search) throws SQLException{
 		List<ShareVO> list = new ArrayList<ShareVO>();

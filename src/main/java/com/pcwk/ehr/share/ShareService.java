@@ -5,7 +5,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-public interface ShareService2 {
+public interface ShareService {
 
 	/**
 	 * 운세 url 조회

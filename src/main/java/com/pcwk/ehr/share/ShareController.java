@@ -18,7 +18,7 @@ public class ShareController {
 	final Logger LOG = LogManager.getLogger(getClass());
 	
 	@Autowired
-	ShareService2 shareService;
+	ShareService shareService;
 
 	@RequestMapping(value = "/ELCARO/shareDesiredURL.do")
 	public String shareDesiredURL(ShareVO search, Model model, HttpServletRequest request) throws SQLException{

@@ -12,12 +12,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ShareServiceImpl2 implements ShareService2 {
+public class ShareServiceImpl implements ShareService {
 
 	final Logger LOG = LogManager.getLogger(getClass());
 
 	@Autowired
-	ShareDao2 shareDao;
+	ShareDao shareDao;
 
 	@Override
 	public List<ShareVO> shareDesiredURL(ShareVO search, HttpServletRequest request) throws  SQLException{
