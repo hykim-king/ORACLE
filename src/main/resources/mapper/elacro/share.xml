@@ -14,7 +14,7 @@
         WHERE
               seq = (SELECT MAX(seq) FROM url_tb WHERE id = #{userId})
     </select>
-    
+
     
  <!--     <select id="selectNickname" parameterType="MyPageVO" resultType="String">
 		    SELECT 
