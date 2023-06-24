@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -10,15 +10,9 @@
             text-align: center;
         }
         @font-face {
-            font-family: 'Hahmlet-Regular';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/Hahmlet-Regular.woff2') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: 'NeoDunggeunmo';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
-            font-weight: normal;
+            font-family: 'EF_hyunydororong';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/EF_hyunydororong.woff2') format('woff2');
+            font-weight: 900;
             font-style: normal;
         }
         .wrapper {
@@ -29,79 +23,144 @@
         .box {
             margin: 20px auto;
             padding: 20px;
-            border: 10px solid #dddddd;
-            width: 200px;
-            box-sizing: content-box;
-            font-size: 70%;
-        }
-        p {
-            font-family: 'Hahmlet-Regular';
-            font-size: 200%;
-            font-weight: 900;
-        }
-
-        button {
-            margin: 20px;
-            font-family: 'NeoDunggeunmo';
-        }
-
-        .w-btn-outline {
-            position: relative;
-            padding: 15px 30px;
-            border-radius: 15px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            font-family: 'NeoDunggeunmo';
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.25s;
             border: 3px solid #fce205;
+            width: 200px;
+            border-radius: 10px;
+            box-sizing: content-box;
+            font-family: 'EF_hyunydororong';
+            font-size: 100%;
+        }
+        .sns-icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .sns-icon {
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .sns-icon.facebook {
+            background-image: url('../resources/images/facebook.png');
+        }
+        .sns-icon.twitter {
+            background-image: url('../resources/images/twitter.png');
+        }
+        .sns-icon.link {
+            background-image: url('../resources/images/link.png');
+        }
+        .sns-icon.naver {
+            background-image: url('../resources/images/naver.png');
+            cursor: pointer;
         }
 
-        .w-btn-yellow-outline {
-            background-color: #fce205;
-            border-color: #fce205;
-        }
-
-        .w-btn-yellow-outline:hover {
-            background-color: #ffffff;
-            color: #fce205;
-        }
-
-        footer {
-            text-align: right;
-            font-size: xx-small;
-        }
     </style>
-    <title>5번 페이지</title>
+    <title>11번 페이지</title>
 </head>
 <body>
+<br><br><br>
 <div class="wrapper">
     <div class="box">
-        <span id="username"></span>님 안녕하세요 
+        결과를 공유해보세요~!
     </div>
 </div>
-<div>
-    <p>Curious about your luck?</p>
-    <p>Check your luck!</p>
-</div>
-<button class="w-btn-outline w-btn-yellow-outline" type="button"
-        onclick="location.href='Ne10_ResultUrl.html'">
-    이전 운세 확인
-</button>
-<button class="w-btn-outline w-btn-yellow-outline" type="button"
-        onclick="location.href='Ne05_MemberResultPage.html'">
-    오늘 운세 확인
-</button>
-<div>
-    <footer>NE PAL ZZA YA(NPZY)</footer>
-</div>
-<script>
-    // 데이터베이스에서 이름 가져오기
-    var username = "${sessionScope.user}"; // 예시 이름, 실제로는 데이터베이스에서 가져온 값을 사용하세요.
 
-    // HTML 요소에 동적으로 이름 삽입
-    var usernameElement = document.getElementById("username");
-    usernameElement.textContent = username;
+
+<!-- 페이스북 SDK 스크립트 -->
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId: '1285820169038891',
+            xfbml: true,
+            version: 'v17.0'
+        });
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v17.0&appId=1285820169038891&autoLogAppEvents=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
 </script>
+
+<script>
+
+    var desiredURL = "${list[0].url}"; // 원하는 URL로 변경
+
+    function shareOnNaver() {
+        var url = encodeURI(encodeURIComponent(desiredURL));
+        var title = encodeURI('오늘의 운세');
+        var shareLink = "https://share.naver.com/web/shareView?url=" + url
+            + "&title=" + title;
+        document.location = shareLink;
+    }
+
+    function shareOnTwitter() {
+        var url = encodeURIComponent(desiredURL);
+        var text = encodeURIComponent('오늘의 운세는');
+        window.open('https://twitter.com/intent/tweet?url=' + url + '&text=' + text, '_blank');
+    }
+
+    function copyToClipboard() {
+        var url = '오늘의 운세는 ' + desiredURL;
+        navigator.clipboard.writeText(url)
+            .then(function() {
+                alert('오늘의 운세 결과가 클립보드에 복사되었습니다.');
+            })
+            .catch(function() {
+                alert('오늘의 운세 결과를 복사하는데 실패했습니다.');
+            });
+    }
+
+    // 페이스북 공유 버튼에 적용(운세 결과 페이지의 URL을 동적으로 설정하는 함수)
+    function shareOnFacebook(url) {
+        var facebookButton = document.getElementById('facebookButton');
+        var shareLink = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url) + '&amp;src=sdkpreparse';
+        facebookButton.setAttribute('data-href', url);
+        facebookButton.querySelector('a').setAttribute('href', shareLink);
+    }
+
+</script>
+
+<!-- 페이스북 공유 버튼 -->
+<span data-href="" id="facebookButton">
+    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+      <div class="sns-icon facebook" onclick="shareOnFacebook(desiredURL)"></div>
+    </a>
+  </span>
+
+<!-- 네이버 공유 버튼 -->
+<span>
+        <script type="text/javascript">
+            new ShareNaver.makeButton({
+                "type" : "f",
+                "title" : "오늘의 운세",
+                "url" : desiredURL,
+                "color" : "1",
+                "count" : "1",
+                "customButton" : ".sns-icon.naver"
+            });
+        </script>
+    </span>
+<a href="#" onclick="shareOnNaver()" >
+    <div class="sns-icon naver" ></div>
+</a>
+<!-- 트위터 공유 버튼 -->
+<a href="#" onclick="shareOnTwitter()">
+    <div class="sns-icon twitter"></div>
+</a>
+<!-- 클립보드 공유 버튼 -->
+<a href="#" onclick="copyToClipboard()">
+    <div class="sns-icon link"></div>
+</a>
+
 </body>
 </html>
