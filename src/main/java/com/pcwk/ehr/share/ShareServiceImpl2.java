@@ -12,12 +12,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ShareServiceImpl implements ShareService {
+public class ShareServiceImpl2 implements ShareService2 {
 
 	final Logger LOG = LogManager.getLogger(getClass());
 
 	@Autowired
-	ShareDao shareDao;
+	ShareDao2 shareDao;
 
 	@Override
 	public List<ShareVO> shareDesiredURL(ShareVO search, HttpServletRequest request) throws  SQLException{
@@ -26,7 +26,7 @@ public class ShareServiceImpl implements ShareService {
 		session.setAttribute("userId", "mj");
 		
         String userId = (String) session.getAttribute("userId");
-       
+
         LOG.debug("┌───────────────────────┐");
 	    LOG.debug("│ session userId: "+userId);
 	    

@@ -11,17 +11,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class ShareDaoImpl implements ShareDao {
+public class ShareDaoImpl2 implements ShareDao2 {
 
 	final Logger LOG = LogManager.getLogger(getClass());
-	
+
 	final String NAMESPACE = "com.pcwk.ehr";
 	final String DOT = ".";
 	
 	@Autowired
 	SqlSessionTemplate sqlSessionTemplate;//DB연결객체
 
-	public ShareDaoImpl() {}
+	public ShareDaoImpl2() {}
 
 	public List<ShareVO> shareDesiredURL(ShareVO search) throws SQLException{
 		List<ShareVO> list = new ArrayList<ShareVO>();

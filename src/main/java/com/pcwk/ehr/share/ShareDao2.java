@@ -4,7 +4,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 
-public interface ShareDao {
+public interface ShareDao2 {
 
 	public List<ShareVO> shareDesiredURL(ShareVO search) throws SQLException;
 
