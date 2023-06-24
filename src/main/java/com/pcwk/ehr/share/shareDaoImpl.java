@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class ShareDaoImpl implements ShareDao {
-	
+
 	final Logger LOG = LogManager.getLogger(getClass());
 	
 	final String NAMESPACE = "com.pcwk.ehr";

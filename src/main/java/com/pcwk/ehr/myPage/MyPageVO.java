@@ -1,13 +1,13 @@
 package com.pcwk.ehr.myPage;
 
 public class MyPageVO {
-//	private String userId;// 회원id
-//	private String userNickname;// 이름
-//	private String passwd;// 비번
-//	private int mbti;
+//	 String userId;// 회원id
+//	 String userNickname;// 이름
+//	 String passwd;// 비번
+//	 int mbti;
 
 	private  String userId;
-	
+
 	private  String userNickname;
 
 
@@ -15,8 +15,8 @@ public class MyPageVO {
 	}
 
 
-	@Override
-	public String toString() {
+	@java.lang.Override
+	public java.lang.String toString() {
 		return "MyPageVO{" +
 				"userId='" + userId + '\'' +
 				", userNickname='" + userNickname + '\'' +

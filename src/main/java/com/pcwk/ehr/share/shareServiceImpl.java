@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ShareServiceImpl implements ShareService {
-	
+
 	final Logger LOG = LogManager.getLogger(getClass());
 
 	@Autowired

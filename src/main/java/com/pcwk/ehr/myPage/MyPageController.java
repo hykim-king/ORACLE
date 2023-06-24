@@ -22,21 +22,21 @@ public class MyPageController {
 
 	@RequestMapping(value = "/ELCARO/myPage.do")
 	public String selectNickname(HttpServletRequest request) throws SQLException {
-		
+
 		HttpSession session = request.getSession();
-        
+
 		//test를 위해 임시로 저장한 것(나중에 삭제)---------------------
 		session.setAttribute("user", "mj");
 		session.setAttribute("niName", "스파이더맨어크로스");
 		//-----------------------------------------
-		
-        String userId = (String) session.getAttribute("user");
-        String userNickname = (String) session.getAttribute("niName");
 
-        
+		String userId = (String) session.getAttribute("user");
+		String userNickname = (String) session.getAttribute("niName");
+
+
 		LOG.debug("┌─────────────────────────────────┐");
-	    LOG.debug("│ userId: "+userId);
-	    LOG.debug("│ userNickname: "+userNickname);
+		LOG.debug("│ userId: "+userId);
+		LOG.debug("│ userNickname: "+userNickname);
 		LOG.debug("└─────────────────────────────────┘");
 
 		return "user/Ne09_MyPage";
